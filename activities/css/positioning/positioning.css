@@ -1,0 +1,14 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.orange{
+    width: 100px;
+    border: black;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+.floatimg {
+    float: right;
+}
+.orange img{
+    width: 100%;
+}
