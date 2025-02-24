@@ -1,0 +1,26 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+     text-align: center;
+}
+footer {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.parent{
+    background-color: aqua;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    outline-color: black;
+    outline-style: inset;
+    outline-width: 5px;
+}
+.child {
+    background-color: rgb(91, 222, 255);
+    outline-color: black;
+    outline-style: inset;
+    outline-width: 2px;
+
+}
