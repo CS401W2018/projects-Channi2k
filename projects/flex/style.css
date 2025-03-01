@@ -39,8 +39,52 @@ nav a:hover {
     text-decoration: underline;
 }
 aside{
-    border: thin solid black;
-    width: 300px;
-    margin: 10px;
+    flex: 0 0 200px;
+    background-color: #f4f4f4;
+    padding: 1em;
 }
-
+main {
+    display: flex;
+    flex: 1
+}
+.fruits {
+    flex: 1;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.fruit-profile {
+    flex: 1 1 calc(33.333% - 2em);
+    background-color: #f9f9f9;
+    padding: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.fruit-profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.profile-card h3 {
+    margin: 0.5em 0;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5em;
+}
+footer a {
+    background-color:aqua;
+    color: blue;
+    text-decoration: none;
+    padding: 1px;
+    display: inline;
+    text-align: center;
+}
+footer a:hover {
+    color: black;
+    background-color: blue;
+    text-decoration: underline;
+}
