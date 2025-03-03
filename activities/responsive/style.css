@@ -1,0 +1,57 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    display: flex;
+    flex: 1;
+
+}
+
+.mainsamurai{
+    flex: 1;
+    padding: 1px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+.samurai {
+    flex: 1;
+    display: flex;
+    flex: wrap;
+    padding: 1em;
+    gap: 1px;
+}
+
+.samurai figure{
+    border: thick solid black;
+    width: 360px;
+    box-shadow: 5px 5px 20px;
+}
+
+.samurai img {
+    width: auto;
+
+}
+nav {
+    display: flex;;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 100px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+nav a {
+    display: flex;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 0, 0);
+
+}
+
+nav a:hover {
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
