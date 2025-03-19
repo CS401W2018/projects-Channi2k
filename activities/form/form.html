@@ -11,6 +11,8 @@
     <header><h1>Web Design</h1></header>
     <main>
         <form action="processing.html" method="post">
+            <fieldset>
+            <legend>Create Account</legend>
             <div class="form-row">
                 <label for="fname">Full Name:</label>
                 <input type="text" name="fullname" id="fname">
@@ -32,16 +34,29 @@
                     <otion value="UT">Utah</otion>
                 </select>
             </div>
-            <div>Year in School:</div>
-            <label><input type="radio" name=year value="freshman">Freshman</label>
-            <label><input type="radio" name=year value="sophomore">Sophomore</label> 
-            <label><input type="radio" name=year value="junior">Junior</label>              
-            <label><input type="radio" name=year value="senior">Senior</label> 
+            <div class="radio-row">
+                <div class="form-spacer">Year in School:</div>
+                <label><input type="radio" name=year value="freshman">Freshman</label>
+                <label><input type="radio" name=year value="sophomore">Sophomore</label> 
+                <label><input type="radio" name=year value="junior">Junior</label>              
+                <label><input type="radio" name=year value="senior">Senior</label>
+            </div>
+            <div class="radio-row">
+                <div class="form-spacer"></div>
+                <label><input type="checkbox" name="remember" id="remember">Remember Me</label>
+            </div>
             <div class="form-row">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-spacer"></div>
                 <input type="submit">
-            </div>       
+            </div>
+        </fieldset>       
         </form>
     </main>
+    <hr>
     <h3>Questions:</h3>
     <ol>
         <li>The form tag has an "action" attribute. What does it do?</li>
@@ -50,7 +65,12 @@
         <p>The method attribute in an HTML form  tag specifies the HTTP method used to send form data to the server, which can be either GET or POST. </p>
         <li>What is the difference between a "POST" and a "GET"?</li>
         <p>You use GET when you want to retrieve data and use POST when you want to submit data.</p>
+        <li>What are different ways to style your form?</li>
+        <p>By adding Width, Padding, Margin, Border, etc. in Input Field</p>
+        <li>Why does the professor like to use flex?</li>
+        <p>Flex makes the alignment looks good. One of the main advantages of flexbox is the ability to fill extra space without the need to use Javascript.</p>
     </ol>
+    <hr>
 <footer>
         &copy; 2025 Christian Inigo - All Rights Reserved    
 </footer> 
