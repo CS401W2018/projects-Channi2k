@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><h1>Web Design</h1></header>
+    <main>
+        <form action="processing.html" method="post">
+            <fieldset>
+            <legend>Create Account</legend>
+            <div class="form-row">
+                <label for="fname">Full Name:</label>
+                <input type="text" name="fullname" id="fname">
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="your@email.com">
+            </div>
+            <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-row"> 
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="blank"></option>
+                    <otion value="CO">Colorado</otion>
+                    <otion value="HI">Hawaii</otion>
+                    <otion value="UT">Utah</otion>
+                </select>
+            </div>
+            <div class="radio-row">
+                <div class="form-spacer">Year in School:</div>
+                <label><input type="radio" name=year value="freshman">Freshman</label>
+                <label><input type="radio" name=year value="sophomore">Sophomore</label> 
+                <label><input type="radio" name=year value="junior">Junior</label>              
+                <label><input type="radio" name=year value="senior">Senior</label>
+            </div>
+            <div class="radio-row">
+                <div class="form-spacer"></div>
+                <label><input type="checkbox" name="remember" id="remember">Remember Me</label>
+            </div>
+            <div class="form-row">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-spacer"></div>
+                <input type="submit">
+            </div>
+        </fieldset>       
+        </form>
+    </main>
+    <hr>
+    <h3>Questions:</h3>
+    <ol>
+        <li>The form tag has an "action" attribute. What does it do?</li>
+        <p>The action attribute defines the action to be performed when the form is submitted. </p>
+        <li>The form tag has a "method" attribute. What does it do?</li>
+        <p>The method attribute in an HTML form  tag specifies the HTTP method used to send form data to the server, which can be either GET or POST. </p>
+        <li>What is the difference between a "POST" and a "GET"?</li>
+        <p>You use GET when you want to retrieve data and use POST when you want to submit data.</p>
+        <li>What are different ways to style your form?</li>
+        <p>By adding Width, Padding, Margin, Border, etc. in Input Field</p>
+        <li>Why does the professor like to use flex?</li>
+        <p>Flex makes the alignment looks good. One of the main advantages of flexbox is the ability to fill extra space without the need to use Javascript.</p>
+    </ol>
+    <hr>
+<footer>
+        &copy; 2025 Christian Inigo - All Rights Reserved    
+</footer> 
+</body>
+</html>
