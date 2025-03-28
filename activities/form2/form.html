@@ -68,43 +68,15 @@
     <footer>
         <p>&copy; 2025 Forms | All Rights Reserved</p>
     </footer>
-    <script>
-        document.getElementById('myForm').addEventListener('submit',function(event) {
-            event.preventDefault();
-            alert("Form Submitted");
-            const fullname = document.getElementById('name').value;
-            const password = document.getElementById('password').value;
-            const date = document.getElementById('dob').value;
+    <script src="form.js"></script>
 
-            if (!fullname || !password) {
-                alert("You need a name and password");
-                return;
-            }
 
-            console.log(fullname);
-            console.log(password);
-            console.log(date);
-
-            const formData = {
-                name: fullname,
-                password: password,
-                date: date,
-            }
-
-        });
-    </script>
-
-     <ol>
-        <li>What is JavaScript? How did it get its name?</li>
-        <p>Netscape and Eich designed JavaScript as a scripting language for use with the company's flagship web browser, Netscape Navigator.</p>
-        <li>What are the two ways you can run JavaScript?</li>
-        <p>Using the Browser Console. Every modern browser has built-in developer tools that allow you to write and run JavaScript code directly in the console.
-        Embedding JavaScript in an HTML File. JavaScript can also be embedded within an HTML file using the script tag.
-        <li>What was the most popular front-end js library?</li>
-        <p>React</p>
-        <li>What is the most popular front-end js library today?</li>
-        <p>React, Angular, Vue and jQuery</p>
-    
+    <ol>
+        <li>What is AJAX?</li>
+        <p>AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web pages to update content asynchronously (in the background) without requiring a full page reload, creating a more interactive and responsive user experience.</p>
+        <li>Why do you put your JS Code in a separate file?</li>
+        <p>It separates HTML and code, it makes HTML and JavaScript easier to read and maintain, and it cached JavaScript files can speed up page loads.
+    </ol>
  
 </body>
 </html>
