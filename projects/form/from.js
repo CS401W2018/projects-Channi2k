@@ -29,7 +29,7 @@ document.getElementById('myForm').addEventListener('submit',function(event) {
             document.getElementById('message').innerHTML = response.message;
             document.getElementById('myForm').innerHTML = "";
             alert('Form submitted succesfully.');
-        } else if (xjr.readyState === 4) {
+        } else if (xhr.readyState === 4) {
             alert('Error submitting form.')
         }
 };
