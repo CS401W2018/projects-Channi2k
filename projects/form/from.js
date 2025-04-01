@@ -1,6 +1,5 @@
 document.getElementById('myForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    alert("Form Submitted");
     const fullname = document.getElementById('name').value;
     const password = document.getElementById('password').value;
     const date = document.getElementById('dob').value;
