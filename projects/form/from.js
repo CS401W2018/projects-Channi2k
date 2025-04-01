@@ -1,4 +1,4 @@
-document.getElementById('myForm').addEventListener('submit',function(event) {
+document.getElementById('myForm').addEventListener('submit', function (event) {
     event.preventDefault();
     alert("Form Submitted");
     const fullname = document.getElementById('name').value;
@@ -10,6 +10,11 @@ document.getElementById('myForm').addEventListener('submit',function(event) {
         return;
     }
 
+    if (password.length !== 8) {
+        alert("Password must be exactly 8 characters long");
+        return;
+    }
+
     console.log(fullname);
     console.log(password);
     console.log(date);
@@ -18,7 +23,8 @@ document.getElementById('myForm').addEventListener('submit',function(event) {
         name: fullname,
         password: password,
         date: date,
-    }
+    };
+
     console.log(formData);
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "submit.json", true);
@@ -28,10 +34,11 @@ document.getElementById('myForm').addEventListener('submit',function(event) {
             const response = JSON.parse(xhr.responseText);
             document.getElementById('message').innerHTML = response.message;
             document.getElementById('myForm').innerHTML = "";
-            alert('Form submitted succesfully.');
+            alert('Form submitted successfully.');
         } else if (xhr.readyState === 4) {
-            alert('Error submitting form.')
+            alert('Error submitting form.');
         }
-};
-xhr.send(JSON.stringify(formData));
+    };
+
+    xhr.send(JSON.stringify(formData));
 });
