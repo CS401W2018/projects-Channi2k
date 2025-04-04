@@ -1,13 +1,26 @@
 body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #f5f5f5; margin: 0; padding: 0; 
 }
 
-header, nav, main, footer { padding: 20px; 
+@font-face{
+    font-family: 'valorant';
+    src: url(Valorant\ Font.woff);
+    font-style: normal;
+    font-weight: 100;
+}    
+
+header, nav, main, footer { padding: 10pt; 
 }
 
-header { background: #ff0000; color: rgb(255, 255, 255); text-align: center; 
+header { background: #FD4556; color: rgb(0, 0, 0); text-align: center; font-family: valorant; font-size: 30pt; text-shadow:
+    3px 3px 0 #FFFBF5,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;; 
+
+
 }
 
-nav a { margin: 0 15px; color: #ffffff; text-decoration: none; font-weight: bold; 
+nav a { margin: 0 50px; color: #ffffff; text-decoration: none; font-weight: bold; font-size: larger;
 }
 
  nav { background: #000000; text-align: center; 
