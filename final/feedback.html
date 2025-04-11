@@ -5,56 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant: The Ultimate Guide</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
-        <h1>vAlorant: The Ultimate Guide</h1>
+        <h1>Valorant: The Ultimate Guide</h1>
     </header>
+
     <nav>
         <a href="valorant.html">Home</a>
         <a href="basics.html">Gameplay</a>
         <a href="agents.html">Agents</a>
-        <a href="maps.html">Maps</a>        
+        <a href="maps.html">Maps</a>
         <a href="stats.html">Weapons</a>
         <a href="esports.html">Esports</a>
         <a href="feedback.html">Feedback</a>
     </nav>
-    <div id="feedback">
-        <h2>Send Us Your Feedback</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+    <main>
+        <div id="feedback">
+            <h2>Send Us Your Feedback</h2>
+            <div id="message"></div>
+            <form id="myForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="agent">Favorite Agent:</label>
-            <input type="text" id="agent" name="agent">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="rank">Rank:</label>
-            <select id="rank" name="rank">
-                <option>Iron</option>
-                <option>Bronze</option>
-                <option>Silver</option>
-                <option>Gold</option>
-                <option>Platinum</option>
-                <option>Diamond</option>
-                <option>Ascendant</option>
-                <option>Immortal</option>
-                <option>Radiant</option>
-            </select>
+                <label for="agent">Favorite Agent:</label>
+                <input type="text" id="agent" name="agent">
 
-            <label for="comments">Comments / Suggestions:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+                <label for="rank">Rank:</label>
+                <select id="rank" name="rank">
+                    <option>Iron</option>
+                    <option>Bronze</option>
+                    <option>Silver</option>
+                    <option>Gold</option>
+                    <option>Platinum</option>
+                    <option>Diamond</option>
+                    <option>Ascendant</option>
+                    <option>Immortal</option>
+                    <option>Radiant</option>
+                </select>
 
-            <input type="submit" value="Submit Feedback">
-        </form>
-    </div>
-</main>
-<footer>
-    <p style="text-align: center;">&copy; 2025 Valorant Guide | Created by a passionate player</p>
-</footer>
+                <label for="comments">Comments / Suggestions:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2025 Valorant Guide | Created by a passionate player</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                const form = event.target;
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const agent = document.getElementById("agent").value;
+                const rank = document.getElementById("rank").value;
+                const comments = document.getElementById("comments").value;
+        
+                console.log("Feedback Submitted:");
+                console.log("Name:", name);
+                console.log("Email:", email);
+                console.log("Favorite Agent:", agent);
+                console.log("Rank:", rank);
+                console.log("Comments:", comments);
+        
+                alert("Thank you for your feedback, " + name + "!");
+                form.reset();
+        
+                const formData = { name, email, agent, rank, comments };
+        
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "submit.json", true);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            try {
+                                const response = JSON.parse(xhr.responseText);
+                                document.getElementById('message').innerHTML = response.message || "Feedback received!";
+                                document.getElementById('myForm').innerHTML = "";
+                            } catch (err) {
+                                alert("Form submitted, but response could not be read.");
+                            }
+                        } else {
+                            alert('Error submitting form. Status: ' + xhr.status);
+                        }
+                    }
+                };
+        
+                xhr.send(JSON.stringify(formData));
+            });
+        });
+        </script>
 </body>
 </html>
 
